@@ -18,6 +18,15 @@ true score of the last line and your predicted score.
 
 Do the same, but only with 10% of the data for training.
 
+## Data
+Given are curves similar to the blue one:
+
+![](https://raw.githubusercontent.com/MartinThoma/vcf/master/images/vcf-curve-1.png)
+
+The black line indicates where your training data stops, the green line is a
+baseline prediction (just predict the last score).
+
+
 
 ## Baselines
 
@@ -27,4 +36,3 @@ Do the same, but only with 10% of the data for training.
 | cnn-32-32-64-64-1024-1024-relu-30000-test.csv | 0.14                 | 0.22                 |
 |                                               |                      |                      |
 
-![](https://raw.githubusercontent.com/MartinThoma/vcf/master/images/vcf-curve-1.png)
