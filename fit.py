@@ -15,10 +15,8 @@ data = vcf.load_data()
 for curve in data:
     xs = np.array([epoch for epoch, _ in curve]).reshape(-1, 1)
     ys = np.array([score for _, score in curve]).reshape(-1, 1)
-    max_train_epoch = int(0.2 * len(curve))
-
-    # ys = 1.0 / (1.0 - ys)
-    # print(ys)
+    percent_traindata = 0.1
+    max_train_epoch = int(percent_traindata * len(curve))
 
     xs_train = xs[:max_train_epoch]
     ys_train = ys[:max_train_epoch]
@@ -29,7 +27,7 @@ for curve in data:
     ys_train = ys_train.reshape(-1, 1)
 
     ys_pred_baseline = np.array([ys_train[-1] for x in xs]).reshape(-1, 1)
-    ys_pred_baseline = np.array([1. - (1.0 / (x / 300.) + 0.2) for x in xs]).reshape(-1, 1)
+    # ys_pred_baseline = np.array([1. - (1.0 / (x / 300.) + 0.2) for x in xs]).reshape(-1, 1)
 
     degree = 1
     model = make_pipeline(PolynomialFeatures(degree), Ridge())
