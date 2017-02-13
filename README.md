@@ -26,3 +26,5 @@ Do the same, but only with 10% of the data for training.
 | cnn32-32-64-64-1024-1024-relu-30000-train.csv | 0.06                 | 0.14                 |
 | cnn-32-32-64-64-1024-1024-relu-30000-test.csv | 0.14                 | 0.22                 |
 |                                               |                      |                      |
+
+![https://raw.githubusercontent.com/MartinThoma/vcf/master/images/vcf-curve-1.png]()
